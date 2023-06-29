@@ -29,7 +29,9 @@ app.get("/weather" , (req,res) => {
 });
 
 app.get("*" , (req,res) => {
-    res.render("error.hbs");
+    res.render("error.hbs", {
+        errMsg : "Sorry u write wrong address", 
+    });
 });
 
 app.listen(port , () => {
